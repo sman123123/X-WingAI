@@ -6,7 +6,7 @@ app.secret_key = "Some Secret Key"
 app.permanent_session_lifetime = timedelta(days=1)
 
 @app.route("/")
-def home():
+def index():
 	return render_template("index.html")
 
 
