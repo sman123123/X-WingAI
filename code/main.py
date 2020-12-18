@@ -7,8 +7,15 @@ app.permanent_session_lifetime = timedelta(days=1)
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	return render_template("index.html", page="home")
 
+@app.route("/test")
+def test():
+	return render_template("test.html", page="test")
+
+@app.route("/construction")
+def construction():
+	return render_template("construction.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
