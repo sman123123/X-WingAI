@@ -3,13 +3,13 @@
 {% block title %}Probability{% endblock %}
 
 {% block content %}
-<h3>Welcome to the Probability Page.</h3>
-<form action="#" method="post">
-	<p>Number of Dice: <input type="integer" name="n" value="{{n}}" placeholder="Max 10"></p>
-	<p>Required Successes: <input type="integer" name="r" value="{{r}}" placeholder="Max 10"></p>
-	<p>Odds of Success: <input type="text" name="p" value="{{p}}" placeholder="ie 1/6, 3/20, 7/8"></p>
-	<input type="submit" value="Submit">
-</form>
-<hr>
-<p>{{prob}}</p>
+	<h3>Welcome to the Probability Page.</h3>
+	<form action="#" method="post">
+		<p>Number of Dice: <input type="integer" name="n" value="{{n}}" placeholder="Max 10"></p>
+		<p>Required Successes: <input type="integer" name="r" value="{{r}}" placeholder="Max 10"></p>
+		<p>Odds of Success: <input type="text" name="p" value="{{p}}" placeholder="ie 1/6, 3/20, 7/8"></p>
+		<input type="submit" value="Submit">
+	</form>
+	<hr>
+	<p>{{prob}}</p>
 {% endblock %}

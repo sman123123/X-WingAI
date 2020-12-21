@@ -3,6 +3,7 @@
 {% block title %}View Database{% endblock %}
 
 {% block content %}
+	<h3>View Database Page</h3>
 	{% for item in values %}
 		<p>Name: {{item.name}}, EMail: {{item.email}}</p>
 	{% endfor %}
