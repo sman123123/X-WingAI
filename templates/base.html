@@ -20,18 +20,22 @@
 						<a {% if page == "home" %} class="nav-link active" aria-current="page" {% else %} class="nav-link" {% endif %} href="/">Home Page</a>
 					</li>
 					<li class="nav-item">
-				  		<a {% if page == "probability" %} class="nav-link active" aria-current="page" {% else %} class="nav-link" {% endif %} href="/probability">Probability</a>
-					</li>
-					<li class="nav-item">
 					  	<a {% if page == "other" %} class="nav-link active" aria-current="page" {% else %} class="nav-link" {% endif %} href="/construction">Other Page</a>
 					</li>
 					<li class="nav-item">
-					  	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled Page</a>
+					  	<a class="nav-link disabled" href="/probability" tabindex="-1" aria-disabled="true">Probability</a>
 					</li>
 				</ul>
 		    </div>
 		  </div>
 		</nav>
+		{% with messages = get_flashed_messages() %}
+			{%if messages %}
+				{% for msg in messages %}
+					<p>{{msg}}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
 		<div class="container">
 			{% block content %}
 			{% endblock %}
