@@ -110,6 +110,7 @@ def logout():
 	flash("You have been logged out!", "info")
 	return redirect(url_for("index"))
 
+
 if __name__ == "__main__":
 	db.create_all()
 	app.run(debug=True)
